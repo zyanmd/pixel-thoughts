@@ -53,18 +53,12 @@ EOF
 
   let skyMode = isLight ? "day" : isSunset ? "sunset" : isAurora ? "aurora" : "night"
 
-  let fileNotes = (rawNotes == null || rawNotes == "" || rawNotes == []) ? [] : rawNotes
-  let fallbackNotes = [
-    {"id": 1729166000, "text": "bintang-bintang pixel di langit malam ✨", "time": 1729166000},
-    {"id": 1729165000, "text": "catat apa saja yang terpikirkan hari ini 💭", "time": 1729165000},
-    {"id": 1729164000, "text": "ide cemerlang selalu datang tiba-tiba 💡", "time": 1729164000}
-  ]
-  let notes = len(fileNotes) > 0 ? fileNotes : fallbackNotes
+  let notes = (rawNotes == null || rawNotes == "" || rawNotes == []) ? [] : rawNotes
   let totalNotes = len(notes)
   let currentNow = now ?? 0
   let autoStep = (totalNotes > 1 && switchSpeed > 0) ? floor(currentNow / switchSpeed) : 0
   let validIndex = totalNotes > 0 ? ((autoStep + manualOffset) % totalNotes + totalNotes) % totalNotes : 0
-  let currentNote = totalNotes > 0 ? notes[validIndex] : {"text": "belum ada catatan", "time": currentNow}
+  let currentNote = totalNotes > 0 ? notes[validIndex] : {"text": "tulis pikiran kamu…", "time": currentNow}
 
   // --- 1. BACKGROUND SIANG: AWAN PIXEL & MATAHARI (UNTUK TEMA PUTIH/TERANG) ---
   component DaytimeBackground() {
