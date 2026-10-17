@@ -1,0 +1,5 @@
+.check/
+.errors/
+.preview/
+*.tmp
+*.log
