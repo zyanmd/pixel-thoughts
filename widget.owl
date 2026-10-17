@@ -538,6 +538,64 @@ EOF
         }
 
         Spacer { height: 16 }
+
+        // Kartu Kredit Pembuat (mirip photo-widget)
+        Row {
+          fill: width
+          padding: [14, 12]
+          background: isLight ? alpha("#ffffff", 0.9) : alpha(surface, 0.75)
+          border: 1
+          borderColor: isLight ? alpha("#6fb0e8", 0.4) : alpha(border, 0.4)
+          radius: 12 * (corners ?? 1)
+          gap: 12
+          onTap: {
+            url("https://github.com/zyanmd")
+            haptic()
+          }
+
+          Box {
+            size: 38
+            radius: 10 * (corners ?? 1)
+            clip: true
+            background: isLight ? alpha("#6fb0e8", 0.2) : alpha(accent, 0.15)
+            border: 1
+            borderColor: isLight ? alpha("#6fb0e8", 0.4) : alpha(accent, 0.35)
+            align: center
+            Text {
+              text: "🐙"
+              fontSize: 20
+              align: center
+            }
+          }
+
+          Column {
+            weight: 1
+            gap: 2
+            Text {
+              text: "Dibuat oleh zyanmd"
+              style: label
+              bold: true
+              color: isLight ? "#10233b" : foreground
+            }
+            Text {
+              text: "github.com/zyanmd"
+              style: small
+              color: isLight ? "#1d4e89" : accent
+            }
+          }
+
+          Button {
+            text: "Kunjungi ↗"
+            width: 95
+            color: isLight ? alpha("#6fb0e8", 0.3) : alpha(accent, 0.25)
+            onTap: {
+              url("https://github.com/zyanmd")
+              haptic()
+            }
+          }
+        }
+
+        Spacer { height: 16 }
         Button {
           text: "tutup layar"
           color: accent

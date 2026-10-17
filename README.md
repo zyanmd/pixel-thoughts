@@ -62,6 +62,24 @@ Widget akan langsung muncul di home screen ponsel Anda dalam hitungan detik!
 
 ---
 
-## 📄 Lisensi
+## 🛠️ Persyaratan Sistem
 
-Proyek ini dilisensikan di bawah [MIT License](LICENSE) © 2026 [zyanmd](https://github.com/zyanmd).
+- **Omalauncher**: OWL 8
+- **Paket Pacman**: `jq` (otomatis diminta via deklarasi `requires`)
+
+---
+
+## 👨‍💻 Pembuat & Lisensi
+
+Dibuat dengan ❤️ oleh [zyanmd](https://github.com/zyanmd).
+
+Didistribusikan di bawah lisensi [MIT](LICENSE).
+
+---
+
+## 💖 Ucapan Terima Kasih & Kredit
+
+- **[Simon Schubert](https://github.com/SimonSchubert)** atas pembuatan launcher & ekosistem [Omalauncher / Omarchy](https://github.com/SimonSchubert/omarchy-widgets).
+- Terinspirasi dari konsep meditasi dan visualisasi pikiran mengambang [Pixel Thoughts](https://www.pixelthoughts.co/).
+- Komunitas dan pembuat tema-tema indah di Omalauncher.
+
